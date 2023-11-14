@@ -6,7 +6,7 @@ defmodule HttpStatus.MixProject do
 
   def project do
     [
-      app: :http_status,
+      app: :ex_http_status,
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
