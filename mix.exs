@@ -32,21 +32,23 @@ defmodule HttpStatus.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.7", only: [:dev]},
-      {:dialyxir, "~> 1.4", only: [:dev]},
-      {:ex_doc, "~> 0.30", only: :docs}
+      {:credo, "~> 1.7", only: :dev},
+      {:dialyxir, "~> 1.4", only: :dev},
+      {:ex_doc, "~> 0.30", only: :dev, runtime: false}
     ]
   end
 
   defp package do
     [
+      name: "ex_http_status",
       maintainers: ["Mihai Potra"],
       licenses: ["MIT"],
       links: %{
         Changelog: "#{@source_url}/blob/master/CHANGELOG.md",
         GitHub: @source_url
       },
-      files: ~w(lib mix.exs README.md CHANGELOG.md LICENSE)
+      source_url: @source_url,
+      files: ~w(lib mix.exs .formatter.exs README.md CHANGELOG.md LICENSE)
     ]
   end
 
